@@ -5,8 +5,8 @@ This repo houses the binary patches for the ONTRACKW.386 driver that allow it to
 
 ### Steps to take
 
-1.  Check the version of the ONTRACKW.386 driver that you have.  You can edit it and scroll down to the bottom, or you can `set ONTRACKDEBUG=Y` before you start Windows.  I have provided patches for V1.06 and V1.07 (v1.07 courtesy of PhilsComputerLab.com).
-2.  Verify the SHA1 of your driver matches the one provided in the respective folder.
+1.  Check the version of the ONTRACKW.386 driver that you have.  You can edit it and scroll down to the bottom, or you can `set ONTRACKDEBUG=Y` before you start Windows.  I have provided the patch for V1.07 (Ontrack Disk Manager v9.57, courtesy of PhilsComputerLab.com).
+2.  Verify the SHA1 of your driver matches the one provided for ONTRACKW.386.
 3.  Download a copy of BSDiff for your OS.
 4.  Use BSPatch to patch your driver.
 5.  Verify the SHA1 of your patched driver matches the ONTRACKX.386.sha1 file provided in the respective folder.
