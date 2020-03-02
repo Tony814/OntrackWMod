@@ -13,8 +13,16 @@ This repo houses the binary patches for the ONTRACKW.386 driver that allow it to
 6.  Profit!
 
 
-#### Technical Details
+### Technical Details
 
 This driver splits Phases 5-A/B into separate sections for CHS and LBA drives.  For all offending phase checks, we patch out a `jz PutValidationInCxAndPrint` with QTY 2 2-byte NOP (66 90).
 - CHS drives get patched only in Phases 6,7,8,9 (0D,0E,0F,10 and 14,15,16,17 as well).
 - LBA drives add another phase in there because the Cylinder High (1F4) and Low (1F5) registers cannot be combined into a single check; each would have been checked independently.  Phases 6,7,8,9,A (et al.) all have the same jump instruction patched out.
+
+
+### Benchmark
+
+WinBench96 shows the improvement that 32-bit disk access has for my system.  I've also included benches of the XTIDE Universal BIOS both with and without RAM shadowing.
+
+![benchmark](DISKCHART2.jpg)
+
